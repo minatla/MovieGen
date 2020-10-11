@@ -1,3 +1,4 @@
+// Import Statements
 import React from "react";
 import ChooseGenre from "./homePage/ChooseGenre";
 import {
