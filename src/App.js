@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ChooseGenre from "./homePage/ChooseGenre";
+import {
+  Button,
+  Paper,
+  Typography,
+  Grid,
+  Box,
+  Container,
+  AppBar,
+  Toolbar,
+} from "../node_modules/@material-ui/core";
+import MovieRec from "./nextPage/MovieRec";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="ChooseGenre">
+        <Container maxWidth="lg">
+          <Box mt="5rem">
+            <Grid container spacing={2} justify="center" alignItems="center">
+              <Paper
+                style={{
+                  textAlign: "center",
+                  borderRadius: "45px",
+                  height: "auto",
+                  width: "65rem",
+                }}
+              >
+                <Route path="/" exact component={ChooseGenre} />
+                <Route path="/movie" component={MovieRec} />
+              </Paper>
+            </Grid>
+          </Box>
+        </Container>
+      </div>
+    </Router>
   );
 }
 
