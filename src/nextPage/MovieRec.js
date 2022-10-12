@@ -25,9 +25,6 @@ const MovieRec = () => {
       </Grid>
       <Grid item xs={12}>
           <RandomMovie /> {/* <--- Random Movie Info*/}
-          <Typography variant="h3" color="secondary">
-            hello
-          </Typography>
       </Grid>
       </Box>
     )

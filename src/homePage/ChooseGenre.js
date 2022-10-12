@@ -13,6 +13,7 @@ import {
 import Genres from "./Genres.js";
 
 function ChooseGenre() {
+  const genre = "poop";
   return (
     <Box my="2rem" mx="2rem">
       <Grid item xs={12} style={{ justify: "center" }}>
@@ -32,7 +33,7 @@ function ChooseGenre() {
       </Grid>
       <Grid item xs={12}>
         <Box mt="2rem">
-          <Genres /> {/* <--- Genre Buttons*/}
+          <Genres genre = {genre}/> {/* <--- Genre Buttons*/}
         </Box>
       </Grid>
     </Box>

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import React from "react";
+import React, { Link } from "react";
 import {
   Button,
   Paper,
@@ -47,16 +47,6 @@ function comedyMovie() {
 }
 
 class MyComponent extends React.Component {
-  constructor(props) {
-      //ignore strikethrough Vscode just considers super() deprecated as of Aug 10th
-      //does not impact code
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      info: [],
-    };
-  }
   //Fetches data of movie from OMDb API
   componentDidMount() {
     var apikey = "ab080b30";
@@ -73,16 +63,16 @@ class MyComponent extends React.Component {
   }
 }
 
-class RandomMovie extends React.Component{
-  render() {
+const RandomMovie = (props) => {
+
+    console.log(props);
   return (
     <Typography variant="h3" color="secondary">
-      Genre: {Genres}
+      Recommended Movie: <br></br>
       {comedyMovie()}
     </Typography>
   );
-  }
-};
+  };
 
 // const genre = 'comedy';
 
